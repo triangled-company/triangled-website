@@ -1,0 +1,16 @@
+{
+	"version": 3,
+	"file": "styles.css",
+	"sources": [
+		"styles.scss",
+		"_sass/fonts.scss",
+		"_sass/main.scss"
+	],
+	"sourcesContent": [
+		"@import \"fonts\";\n@import \"main\";",
+		"//local font import\n\n@font-face {\n    font-family: 'Roboto Mono';\n    src: url('/assets/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf') format('truetype');\n    font-style: normal;\n}\n@font-face {\n    font-family: 'Roboto Mono';\n    src: url('/assets/fonts/Roboto_Mono/RobotoMono-Italic-VariableFont_wght.ttf') format('truetype');\n    font-style: italic;\n}\n@font-face {\n    font-family: 'Benne';\n    src: url('/assets/fonts/Benne/Benne-Regular.ttf') format('truetype');\n    font-style: normal;\n}\n\n@font-face {\n    font-family: 'Baloo Tammudu 2';\n    src: url('/assets/fonts/Baloo_Tammudu_2/BalooTammudu2-Bold.ttf') format('truetype');\n    font-weight: bold;\n    font-style: normal;\n}\n@font-face {\n    font-family: 'Baloo Tammudu 2';\n    src: url('/assets/fonts/Baloo_Tammudu_2/BalooTammudu2-ExtraBold.ttf') format('truetype');\n    font-weight: bolder;\n    font-style: normal;\n}\n@font-face {\n    font-family: 'Baloo Tammudu 2';\n    src: url('/assets/fonts/Baloo_Tammudu_2/BalooTammudu2-Medium.ttf') format('truetype');\n    font-weight: medium;\n    font-style: normal;\n}\n@font-face {\n    font-family: 'Baloo Tammudu 2';\n    src: url('/assets/fonts/Baloo_Tammudu_2/BalooTammudu2-Regular.ttf') format('truetype');\n    font-weight: normal;\n    font-style: normal;\n}",
+		"// color variables\n\n:root {\n    --border-color: #a5a5a5;\n}\n\n// darkmode color variables\n\n[data-theme=\"dark\"] {\n    --border-color: #a5a5a5;\n}\n\nbody {\n    margin: 0;\n    background-color: white;\n    scroll-behavior: smooth;\n}\n\n#profil {\n    \n}"
+	],
+	"names": [],
+	"mappings": "ACEA,UAAU,GACN,WAAW,EAAE,aAAa,EAC1B,GAAG,EAAE,iEAAiE,CAAC,kBAAkB,EACzF,UAAU,EAAE,MAAM;;AAEtB,UAAU,GACN,WAAW,EAAE,aAAa,EAC1B,GAAG,EAAE,wEAAwE,CAAC,kBAAkB,EAChG,UAAU,EAAE,MAAM;;AAEtB,UAAU,GACN,WAAW,EAAE,OAAO,EACpB,GAAG,EAAE,4CAA4C,CAAC,kBAAkB,EACpE,UAAU,EAAE,MAAM;;AAGtB,UAAU,GACN,WAAW,EAAE,iBAAiB,EAC9B,GAAG,EAAE,2DAA2D,CAAC,kBAAkB,EACnF,WAAW,EAAE,IAAI,EACjB,UAAU,EAAE,MAAM;;AAEtB,UAAU,GACN,WAAW,EAAE,iBAAiB,EAC9B,GAAG,EAAE,gEAAgE,CAAC,kBAAkB,EACxF,WAAW,EAAE,MAAM,EACnB,UAAU,EAAE,MAAM;;AAEtB,UAAU,GACN,WAAW,EAAE,iBAAiB,EAC9B,GAAG,EAAE,6DAA6D,CAAC,kBAAkB,EACrF,WAAW,EAAE,MAAM,EACnB,UAAU,EAAE,MAAM;;AAEtB,UAAU,GACN,WAAW,EAAE,iBAAiB,EAC9B,GAAG,EAAE,8DAA8D,CAAC,kBAAkB,EACtF,WAAW,EAAE,MAAM,EACnB,UAAU,EAAE,MAAM;;CCtCrB,AAAD,IAAK,CAAC,EACF,cAAc,CAAA,QAAC,GAClB;;CAID,AAAA,AAAA,UAAC,CAAW,MAAM,AAAjB,EAAmB,EAChB,cAAc,CAAA,QAAC,GAClB;;AAED,AAAA,IAAI,CAAC,EACD,MAAM,EAAE,CAAC,EACT,gBAAgB,EAAE,KAAK,EACvB,eAAe,EAAE,MAAM,GAC1B"
+}
