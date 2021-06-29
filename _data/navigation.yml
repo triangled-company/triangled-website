@@ -1,0 +1,8 @@
+- name: Shop
+  link: /
+- name: Konfigurations Tool
+  link: /
+- name: Home
+  link: /
+- name: Warenkorb
+  link: /

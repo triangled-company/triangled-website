@@ -1,8 +1,13 @@
 <nav>
-    <h1>TriangLED</h1>
-    <a href="">Shop</a>
-    <a href="">Konfigurations Tool</a>
-    <a href="">Home</a>
-    <a href="">Warenkorb</a>
-    <span id="profil"></span>
+    <div>
+        <img id="logo" src="/assets/icons/logo.svg" alt="">
+    
+        <div id="nav-container">
+            {% for item in site.data.navigation %}
+            <a href="{{ item.link }}" class="menu-link {% if page.url == item.link %}currentPage{% endif %}">{{ item.name }}</a>
+            {% endfor %}
+        </div>
+        
+        <div id="profil"></div>
+    </div>
 </nav>

@@ -14,8 +14,22 @@
 
 :root { --border-color: #a5a5a5; }
 
+body { height: 2000px; }
+
 [data-theme="dark"] { --border-color: #a5a5a5; }
 
 body { margin: 0; background-color: white; scroll-behavior: smooth; }
+
+nav { border-bottom: #cccccc solid 1px; position: -webkit-sticky; position: sticky; top: 0; background-color: white; padding: 8px; }
+
+nav div { position: relative; }
+
+#logo { height: 60px; }
+
+#profil { position: absolute; height: 60px; width: 60px; border-radius: 100%; border: gray solid 1px; background-image: url(/assets/icons/user.svg); background-size: cover; top: 50%; transform: translateY(-50%); right: 4px; background-color: white; }
+
+#nav-container { position: absolute; top: 50%; transform: translateY(-50%); display: block; right: 90px; }
+
+.menu-link { font-size: 22px; font-family: Arial, Helvetica, sans-serif; color: #45a29e; margin: 2px; background-color: #f0f0f0; border: solid 1px #45a29e; padding: 6px; border-radius: 2px; text-decoration: none; }
 
 /*# sourceMappingURL=styles.css.map */

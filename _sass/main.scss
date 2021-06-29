@@ -4,6 +4,10 @@
     --border-color: #a5a5a5;
 }
 
+body {
+    height: 2000px;
+}
+
 // darkmode color variables
 
 [data-theme="dark"] {
@@ -14,8 +18,4 @@ body {
     margin: 0;
     background-color: white;
     scroll-behavior: smooth;
-}
-
-#profil {
-    
 }
