@@ -3,47 +3,98 @@ nav {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 11;
     background-color: white;
-    padding: 8px;
 }
 
-nav div {
-    position: relative;
+nav ul {
+    list-style-type: none;
+    margin: 0 0 0 auto;
+    width: max-content;
+    padding: 0;
+    overflow: hidden;
 }
 
-#logo {
-    height: 60px;
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    font-size: 22px;
+    color: #45a29e;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 20px 10px;
+    text-decoration: none;
+    transition: 100ms;
+    border-radius: 4px;
+    margin: 4px;
+}
+
+nav li a:hover {
+    background-color: #f0f0f0;
 }
 
 #profil {
-    position: absolute;
-    height: 60px;
-    width: 60px;
+    height: 43px;
+    width: 43px;
+    padding: 6px 6px;
+    margin: 8px;
+    
     border-radius: 100%;
     border: gray solid 1px;
     background-image: url(/assets/icons/user.svg);
     background-size: cover;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 4px;
+}
+
+#menu-btn button {
+    display: none;
+    color: #45a29e;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 20px 10px;
+    border-radius: 4px;
+    margin: 4px;
+    border: none;
     background-color: white;
 }
 
-#nav-container {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: block;
-    right: 90px;    
+#dropdown {
+    display: none;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 74px;
+    z-index: 11;
+    background-color: #5cc95c;
 }
-.menu-link {
+#dropdown ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    width: max-content;
+}
+#dropdown li {
+    float: left;
+}
+#dropdown a {
+    display: block;
+    color: #424242;
     font-size: 22px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #45a29e;
-    margin: 2px;
-    background-color: rgb(240, 240, 240);
-    border: solid 1px #45a29e;
-    padding: 6px;
-    border-radius: 2px;
+    padding: 8px;
+    margin: 4px;
     text-decoration: none;
+    background-color: #8dd38d;
+}
+
+@media screen and (max-width: 820px) {
+    .nav-link {
+        display: none;
+    }
+    #menu-btn button {
+        display: block;
+    }
 }

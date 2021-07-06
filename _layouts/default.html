@@ -11,6 +11,10 @@
   </head>
   
   <body>
+    {% if page.type == "index" %}
+      {% include banner.html %}
+    {% endif %}
+
     {% include navigation.html %}
     {{ content }}
     {% include footer.html %}

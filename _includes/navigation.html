@@ -1,13 +1,33 @@
 <nav>
-    <div>
-        <img id="logo" src="/assets/icons/logo.svg" alt="">
-    
-        <div id="nav-container">
-            {% for item in site.data.navigation %}
-            <a href="{{ item.link }}" class="menu-link {% if page.url == item.link %}currentPage{% endif %}">{{ item.name }}</a>
-            {% endfor %}
-        </div>
-        
-        <div id="profil"></div>
-    </div>
+    <ul>
+        {% for item in site.data.navigation %}
+        <li class="nav-link"><a href="{{ item.link }}">{{ item.name }}</a></li>
+        {% endfor %}
+
+        <li id="menu-btn"><button onclick="">menu</button></li>
+        <li id="profil"></li>
+    </ul>
 </nav>
+<div id="dropdown">
+    <ul>
+        {% for item in site.data.navigation %}
+        <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+        {% endfor %}
+    </ul> 
+</div>
+
+<script>
+    const menuBtn = document.getElementById('menu-btn')
+    const dropdown = document.getElementById('dropdown')
+    let menuOpen = false
+  
+    menuBtn.addEventListener('click', () => {
+        if(!menuOpen) {
+            menuOpen = true
+            document.getElementById("dropdown").style.display = "block"
+        } else {    
+            menuOpen = false
+            document.getElementById("dropdown").style.display = "none"
+        }
+    });
+</script>
