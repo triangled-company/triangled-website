@@ -1,16 +1,16 @@
-@font-face { font-family: 'Roboto Mono'; src: url("/assets/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf") format("truetype"); font-style: normal; }
+@font-face { font-family: 'Roboto Mono'; src: url("assets/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf") format("truetype"); font-style: normal; }
 
-@font-face { font-family: 'Roboto Mono'; src: url("/assets/fonts/Roboto_Mono/RobotoMono-Italic-VariableFont_wght.ttf") format("truetype"); font-style: italic; }
+@font-face { font-family: 'Roboto Mono'; src: url("assets/fonts/Roboto_Mono/RobotoMono-Italic-VariableFont_wght.ttf") format("truetype"); font-style: italic; }
 
-@font-face { font-family: 'Benne'; src: url("/assets/fonts/Benne/Benne-Regular.ttf") format("truetype"); font-style: normal; }
+@font-face { font-family: 'Benne'; src: url("assets/fonts/Benne/Benne-Regular.ttf") format("truetype"); font-style: normal; }
 
-@font-face { font-family: 'Baloo Tammudu 2'; src: url("/assets/fonts/Baloo_Tammudu_2/BalooTammudu2-Bold.ttf") format("truetype"); font-weight: bold; font-style: normal; }
+@font-face { font-family: 'Baloo Tammudu 2'; src: url("assets/fonts/Baloo_Tammudu_2/BalooTammudu2-Bold.ttf") format("truetype"); font-weight: bold; font-style: normal; }
 
-@font-face { font-family: 'Baloo Tammudu 2'; src: url("/assets/fonts/Baloo_Tammudu_2/BalooTammudu2-ExtraBold.ttf") format("truetype"); font-weight: bolder; font-style: normal; }
+@font-face { font-family: 'Baloo Tammudu 2'; src: url("assets/fonts/Baloo_Tammudu_2/BalooTammudu2-ExtraBold.ttf") format("truetype"); font-weight: bolder; font-style: normal; }
 
-@font-face { font-family: 'Baloo Tammudu 2'; src: url("/assets/fonts/Baloo_Tammudu_2/BalooTammudu2-Medium.ttf") format("truetype"); font-weight: medium; font-style: normal; }
+@font-face { font-family: 'Baloo Tammudu 2'; src: url("assets/fonts/Baloo_Tammudu_2/BalooTammudu2-Medium.ttf") format("truetype"); font-weight: medium; font-style: normal; }
 
-@font-face { font-family: 'Baloo Tammudu 2'; src: url("/assets/fonts/Baloo_Tammudu_2/BalooTammudu2-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Baloo Tammudu 2'; src: url("assets/fonts/Baloo_Tammudu_2/BalooTammudu2-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
 :root { --border-color: #a5a5a5; }
 
@@ -30,7 +30,7 @@ nav li a { display: block; font-size: 22px; color: #45a29e; font-family: Arial, 
 
 nav li a:hover { background-color: #f0f0f0; }
 
-#profil { height: 43px; width: 43px; padding: 6px 6px; margin: 8px; border-radius: 100%; border: gray solid 1px; background-image: url(/assets/icons/user.svg); background-size: cover; }
+#profil { height: 43px; width: 43px; padding: 6px 6px; margin: 8px; border-radius: 100%; border: gray solid 1px; background-image: url(../icons/user.svg); background-size: cover; }
 
 #menu-btn button { display: none; color: #45a29e; font-size: 22px; font-family: Arial, Helvetica, sans-serif; text-align: center; padding: 20px 10px; border-radius: 4px; margin: 4px; border: none; background-color: white; }
 
@@ -76,7 +76,7 @@ footer img { position: absolute; right: 40px; top: 10%; height: 80%; }
 
 .shop h1 { font-size: 24px; font-weight: 400; text-align: center; }
 
-.shop img { height: auto; max-width: 100%; vertical-align: middle; }
+.shop img { height: auto; width: 100%; vertical-align: middle; }
 
 .btn { padding: 0.8rem; font-size: 14px; text-transform: uppercase; border-radius: 4px; font-weight: 400; display: block; width: 100%; cursor: pointer; border: 1px solid rgba(255, 255, 255, 0.2); background-color: #45a29e; color: white; }
 
