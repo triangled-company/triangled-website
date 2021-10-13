@@ -1,24 +1,16 @@
-@font-face { font-family: 'Roboto Mono'; src: url("assets/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf") format("truetype"); font-style: normal; }
+@font-face { font-family: Inter; src: url(/assets/fonts/Inter/Inter-VariableFont.ttf); }
 
-@font-face { font-family: 'Roboto Mono'; src: url("assets/fonts/Roboto_Mono/RobotoMono-Italic-VariableFont_wght.ttf") format("truetype"); font-style: italic; }
-
-@font-face { font-family: 'Benne'; src: url("assets/fonts/Benne/Benne-Regular.ttf") format("truetype"); font-style: normal; }
-
-@font-face { font-family: 'Baloo Tammudu 2'; src: url("assets/fonts/Baloo_Tammudu_2/BalooTammudu2-Bold.ttf") format("truetype"); font-weight: bold; font-style: normal; }
-
-@font-face { font-family: 'Baloo Tammudu 2'; src: url("assets/fonts/Baloo_Tammudu_2/BalooTammudu2-ExtraBold.ttf") format("truetype"); font-weight: bolder; font-style: normal; }
-
-@font-face { font-family: 'Baloo Tammudu 2'; src: url("assets/fonts/Baloo_Tammudu_2/BalooTammudu2-Medium.ttf") format("truetype"); font-weight: medium; font-style: normal; }
-
-@font-face { font-family: 'Baloo Tammudu 2'; src: url("assets/fonts/Baloo_Tammudu_2/BalooTammudu2-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-
-:root { --border-color: #a5a5a5; }
-
-body { height: 2000px; }
+:root { --border-color: #a5a5a5; --main-color: #45a29e; }
 
 [data-theme="dark"] { --border-color: #a5a5a5; }
 
 body { margin: 0; background-color: white; scroll-behavior: smooth; }
+
+#introduction-section { position: relative; }
+
+#introduction-section #text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.219); padding: 16px; font-family: Arial, Helvetica, sans-serif; color: white; text-align: center; }
+
+#introduction-section img { width: 100%; }
 
 nav { border-bottom: #cccccc solid 1px; position: -webkit-sticky; position: sticky; top: 0; z-index: 11; background-color: white; }
 
@@ -26,7 +18,7 @@ nav ul { list-style-type: none; margin: 0 0 0 auto; width: max-content; padding:
 
 nav li { float: left; }
 
-nav li a { display: block; font-size: 22px; color: #45a29e; font-family: Arial, Helvetica, sans-serif; text-align: center; padding: 20px 10px; text-decoration: none; transition: 100ms; border-radius: 4px; margin: 4px; }
+nav li a { display: block; font-size: 22px; color: var(--main-color); font-family: Arial, Helvetica, sans-serif; text-align: center; padding: 20px 10px; text-decoration: none; transition: 100ms; border-radius: 4px; margin: 4px; }
 
 nav li a:hover { background-color: #f0f0f0; }
 
@@ -72,34 +64,24 @@ footer img { position: absolute; right: 40px; top: 10%; height: 80%; }
 
 .shop *, .shop *::before, .shop *::after { box-sizing: border-box; }
 
-.shop { max-width: 1200px; margin: 0 auto; }
+.shop { max-width: 680px; margin: 0 auto; display: flex; flex-wrap: wrap; list-style: none; padding: 0; }
 
-.shop h1 { font-size: 24px; font-weight: 400; text-align: center; }
+.card-wrapper { display: flex; width: 100%; box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.507), -20px 20px 40px rgba(0, 0, 0, 0.507); }
 
-.shop img { height: auto; width: 100%; vertical-align: middle; }
+.card { display: flex; height: 300px; width: 100%; background-color: white; transition: box-shadow 0.1s, transform 0.1s; background-image: url(../product-pictures/product1.png); background-size: contain; background-position: center; background-repeat: no-repeat; }
 
-.btn { padding: 0.8rem; font-size: 14px; text-transform: uppercase; border-radius: 4px; font-weight: 400; display: block; width: 100%; cursor: pointer; border: 1px solid rgba(255, 255, 255, 0.2); background-color: #45a29e; color: white; }
+.card:hover { cursor: pointer; }
 
-.btn:hover { background-color: #d4eceb; color: #2e2e2e; }
+.card-content { position: relative; height: 100%; width: 100%; }
 
-.cards { display: flex; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
+.card-content .buy { position: absolute; margin: 16px; padding: 8px 32px; font-size: 16px; border: none; background-color: #45a29e; border-radius: 100px; bottom: 0; right: 0; }
 
-.cards-item { display: flex; padding: 1rem; }
+.card-content .price { position: absolute; bottom: 0; font-family: Inter; font-weight: 400; font-size: 16px; position: absolute; margin: 16px; padding: 8px 32px; bottom: 0; left: 0; background-color: #cccccc; color: #3d4252; }
 
-@media (min-width: 40rem) { .cards-item { width: 50%; } }
+@media (max-width: 530px) { .shop { max-width: 370px; } }
 
-@media (min-width: 56rem) { .cards-item { width: 33.3333%; } }
+@media (min-width: 1040px) { .card-wrapper { width: 50%; } .shop { max-width: 1200px; } }
 
-.card { border-radius: 6px; box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25); border: solid 1px #dddddd; display: flex; flex-direction: column; overflow: hidden; }
-
-.card-content { padding: 1rem; font-family: Arial, Helvetica, sans-serif; }
-
-.card-title { font-size: 1.1rem; font-weight: 700; letter-spacing: 1px; text-transform: capitalize; margin: 0px; }
-
-.card-price { font-weight: 100; }
-
-.card-text { font-size: 0.875rem; line-height: 1.5; margin-bottom: 1.25rem; font-weight: 400; }
-
-.made-by { font-weight: 400; font-size: 13px; margin-top: 35px; text-align: center; }
+@media (min-width: 1900px) { .card-wrapper { width: 33.3333%; } }
 
 /*# sourceMappingURL=styles.css.map */

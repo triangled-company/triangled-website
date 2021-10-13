@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        html {
+            margin: 64px;
+        }
+        
+        .tilt {
+          display: block;
+          height: 200px;
+          width: 300px;
+          background-color: grey;
+          transition: box-shadow 0.1s, transform 0.1s;
+          background-image: url(assets/product-pictures/product2.png);
+          background-size: contain;
+          background-position: center;
+        }
+        
+        .tilt:hover {
+          cursor: pointer;
+        }
+    </style>
+        
+    <div id="{{ item.index }}" class="tilt" onmousemove="mouseInHandler(event, this.id)" onmouseout="mouseOutHandler(event, this.id)"></div>
+    <div id="{{ item.index }}" class="tilt" onmousemove="mouseInHandler(event, this.id)" onmouseout="mouseOutHandler(event, this.id)"></div>
+        
+    <script>
+        function mouseInHandler(event, id) {
+            var mouseX = event.layerX
+            var mouseY = event.layerY
+          
+            var height = document.getElementById(id).clientHeight
+            var width = document.getElementById(id).clientWidth
+
+            var yRotation = 20 * ((mouseX - width / 2) / width)
+            var xRotation = -20 * ((mouseY - height / 2) / height)
+          
+            document.getElementById(id).style.transform = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
+        }
+        
+        function mouseOutHandler(event, id) {
+            document.getElementById(id).style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
+        }
+    </script>
+</body>
+</html>

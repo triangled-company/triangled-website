@@ -1,19 +1,34 @@
-<div class="shop">
-    <ul class="cards">
-        {% for item in site.data.shop-cards %}
-            <li class="cards-item">
-                <div class="card">
-                <div class="card-image"><img src="https://via.placeholder.com/300x400"></div>
+<ul class="shop">
+    {% for item in site.data.shop-cards %}
+        <li class="card-wrapper">
+            <div id="{{ item.index }}" class="card" onmousemove="mouseInHandler(event, this.id)" onmouseout="mouseOutHandler(event, this.id)">
                 <div class="card-content">
-                    <h2 class="card-title">{{ item.name }}</h2>
-                    <h3 class="card-price">{{ item.price }} €</h3>
-                    <p class="card-text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-                    <button class="btn card-btn">Read More</button>
+                    <h2 class="price">{{ item.price }}</h2>
+                    <button class="buy">in den Einkaufswagen</button>
                 </div>
-                </div>
-            </li>
-        {% endfor %}
-    </ul>
-</div>
+            </div>
+        </li>
+    {% endfor %}
+</ul>
 
-<!-- assets/product-pictures/{{ item.name }}.png -->
+<script>
+    var effectStrength = 4
+    var effectScale = 1.02
+
+    function mouseInHandler(event, id) {
+        var mouseX = event.layerX
+        var mouseY = event.layerY
+        
+        var height = document.getElementById(id).clientHeight
+        var width = document.getElementById(id).clientWidth
+
+        var yRotation = effectStrength * ((mouseX - width / 2) / width)
+        var xRotation = -effectStrength * ((mouseY - height / 2) / height)
+          
+        document.getElementById(id).style.transform = 'perspective(500px) scale(' + effectScale + ') rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
+    }
+        
+    function mouseOutHandler(event, id) {
+        document.getElementById(id).style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
+    }
+</script>

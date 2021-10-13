@@ -2,10 +2,7 @@
 
 :root {
     --border-color: #a5a5a5;
-}
-
-body {
-    height: 2000px;
+    --main-color: #45a29e;
 }
 
 // darkmode color variables
@@ -18,4 +15,24 @@ body {
     margin: 0;
     background-color: white;
     scroll-behavior: smooth;
+}
+
+#introduction-section{
+    position: relative;
+}
+
+#introduction-section #text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.219);
+    padding: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+#introduction-section img {
+    width: 100%;
 }
